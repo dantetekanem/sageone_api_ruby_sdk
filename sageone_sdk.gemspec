@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'sawyer', '~> 0.5.3'
   spec.add_dependency 'faraday_middleware', "~> 0.9.1"
   spec.add_dependency 'hashie'
-  spec.add_dependency 'yard'
+  spec.add_dependency 'yard', '>= 0', '>= 0'
   spec.add_dependency "activesupport", "~> 4.2.5"
 
   spec.add_development_dependency "bundler", "~> 1.7"
