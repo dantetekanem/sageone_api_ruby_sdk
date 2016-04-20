@@ -21,7 +21,7 @@ module SageoneSdk
     # Calls token_request to request an access token using a refresh token
     # @param [string] refresh_token
     def refresh_access_token(refresh_token)
-      token_request("refresh_token", refresh_token: refresh_token)
+      token_request("refresh_token")
     end
 
     # Makes a POST request to retrieve an access token and refresh token
@@ -44,7 +44,7 @@ module SageoneSdk
         })
       elsif type == "refresh_token"
         payload = payload.merge({
-          refresh_token: options[:refresh_token],
+          refresh_token: @refresh_token,
           grant_type: 'refresh_token'
         })
       end
